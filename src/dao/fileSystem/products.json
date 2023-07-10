@@ -1,0 +1,134 @@
+[
+	{
+		"title": "Crema nutritiva",
+		"description": "con malba",
+		"category": "Cremas",
+		"price": 1500,
+		"thumbnail": "Link imagen producto1",
+		"code": "c1",
+		"stock": 30,
+		"status": true,
+		"id": 1
+	},
+	{
+		"title": "Crema humectante",
+		"description": "con aloe Vera",
+		"category": "Cremas",
+		"price": 3000,
+		"thumbnail": "Link imagen producto2",
+		"code": "c2",
+		"stock": 40,
+		"status": true,
+		"id": 2
+	},
+	{
+		"title": "Crema de limpieza",
+		"description": "con arcilla",
+		"category": "Cremas",
+		"price": 2500,
+		"thumbnail": "Link imagen producto3",
+		"code": "c3",
+		"stock": 35,
+		"status": true,
+		"id": 3
+	},
+	{
+		"title": "Crema antiarrugas",
+		"description": "con vitamina E",
+		"category": "Cremas",
+		"price": 3500,
+		"thumbnail": "Link imagen producto4",
+		"code": "c4",
+		"stock": 45,
+		"status": true,
+		"id": 4
+	},
+	{
+		"title": "Crema descontracturante",
+		"description": "con alcanfor",
+		"category": "Cremas",
+		"price": 1500,
+		"thumbnail": "Link imagen producto5",
+		"code": "c5",
+		"stock": 25,
+		"status": true,
+		"id": 5
+	},
+	{
+		"title": "Gel de caléndula",
+		"description": "con caléndula",
+		"category": "Geles",
+		"price": 2800,
+		"thumbnail": "Link imagen producto6",
+		"code": "g1",
+		"stock": 40,
+		"status": true,
+		"id": 6
+	},
+	{
+		"title": "Gel de criógeno",
+		"description": "con mentol",
+		"category": "Geles",
+		"price": 1700,
+		"thumbnail": "Link imagen producto7",
+		"code": "g2",
+		"stock": 30,
+		"status": true,
+		"id": 7
+	},
+	{
+		"title": "Gel muscular",
+		"description": "con jarilla",
+		"category": "Geles",
+		"price": 2100,
+		"thumbnail": "Link imagen producto8",
+		"code": "g3",
+		"stock": 50,
+		"status": true,
+		"id": 8
+	},
+	{
+		"title": "Loción antiacné",
+		"description": "con equsetum",
+		"category": "Lociones",
+		"price": 2900,
+		"thumbnail": "Link imagen producto9",
+		"code": "l1",
+		"stock": 30,
+		"status": true,
+		"id": 9
+	},
+	{
+		"title": "Loción humectante",
+		"description": "con ginkgo biloba",
+		"category": "Lociones",
+		"price": 4500,
+		"thumbnail": "Link imagen producto10",
+		"code": "l2",
+		"stock": 50,
+		"status": true,
+		"id": 10
+	},
+	{
+		"title": "Crema nutri",
+		"description": "con malba",
+		"category": "Cremas",
+		"price": 1500,
+		"thumbnail": "Link imagen producto1",
+		"code": "c11",
+		"stock": 30,
+		"status": true,
+		"id": 11
+	},
+	{
+		"title": "Crema nutri1",
+		"description": "con malba",
+		"category": "Cremas",
+		"price": 1500,
+		"thumbnail": "Link imagen producto1",
+		"code": "c111",
+		"stock": 30,
+		"status": true,
+		"id": 12
+	}
+]

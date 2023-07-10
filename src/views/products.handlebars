@@ -1,0 +1,58 @@
+<section>
+
+    {{#if user}}
+    <div>
+        <h1>Bienvenido {{user.name}}</h1>
+        <h3>Email: {{user.email}}</h3>
+    </div>
+    <div>
+        <button id="logoutButton">Logout</button>
+    </div>
+    {{/if}}
+
+    <h1>LISTA DE PRODUCTOS</h1>
+    <div>
+        <form action="/" method="GET">
+            <div>
+                <label for="limit">Carntidad de productos:</label>
+                <select name="limit" id="limit">
+                    <option value="3">3</option>
+                    <option value="5">5</option>
+                    <option value="8">8</option>
+                </select>
+
+                <label for="sort">Ordenar por:</label>
+                <select name="sort" id="sort">
+                    <option value="1">Menor precio</option>
+                    <option value="-1">Mayor precio</option>
+                </select>
+            </div>
+            <button type="submit">Aplicar cambios</button>
+        </form>
+
+    </div>
+    {{#each products}}
+    <div>
+        <h3>{{this.title}}</h3>
+        <p>Descripción: {{this.description}}</p>
+        <p>Categoría: {{this.category}}</p>
+        <p>Precio: ${{this.price}}</p>
+        <button id="{{_id}}" class="add-to-cart-button">Agregar al carrito</button>
+        <br/>
+    </div>
+    {{/each}}
+    {{#if hasPrevPage}}
+    <a href="/?page={{prevPage}}"><button>Anterior</button></a>
+    {{/if}}
+
+    {{page}}
+
+    {{#if hasNextPage}}
+    <a href="/?page={{nextPage}}"><button>Siguiente</button></a>
+    {{/if}}
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/js/productHandler.js"></script>
+<script src="/js/login.js"></script>
+<script src="/js/logout.js"></script>

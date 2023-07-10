@@ -1,0 +1,20 @@
+<div>
+    <h1>Login de usuario</h1>
+    <p>¿Necesitas una cuenta? <a href="/register">Registrate aquí</a> </p>
+    <form id="loginForm">
+        <label>Email</label>
+        <input name="email">
+
+        <label>Contraseña</label>
+        <input type="password" name="password">
+
+        <input type="submit">
+    </form>
+</div>
+<div>
+    <p>Tambien puedes ingresar por <a id="github" href="/api/sessions/github"><button type="submit">Github</button></a></p>
+    <p>¿Olvidaste tu contraseña? <a href="/restorePassword">Restablécela aquí</a></p>
+</div>
+
+<script src="/js/login.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
