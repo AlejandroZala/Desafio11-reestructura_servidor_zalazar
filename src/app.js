@@ -26,8 +26,8 @@ mongoose.connect(config.mongo.URL)
 const io = new Server(server);      //Levanto mi server
 
 //CONFIGURACION MAILING
-const APP_PASSWORD = 'bcoeepwdoqommfmt';
-const APP_EMAIL = 'alejandrodzalazar@gmail.com';
+const APP_PASSWORD = config.nodemailer.APP_PASSWORD;
+const APP_EMAIL = config.nodemailer.APP_EMAIL;
 //Genero el vinculo entre el servico seleccionado y mi herramienta
 const transport = nodemailer.createTransport({
     service: 'gmail',
@@ -65,19 +65,19 @@ app.get('/mail',async (req, res) => {
 })
 
 //CONFIGURACIÓN MENSAJERÍA TWILIO
-const TWILIO_NUMBER= '+18145593595'
-const TWILIO_SID = 'AC9e13db7da5478040814b7b4a92c3c0d2';
-const TWILIO_TOKEN = '9784f6eba4a4d97779f75502c3e641d5';
+const TWILIO_NUMBER= config.twilio.TWILIO_NUMBER;
+const TWILIO_SID = config.twilio.TWILIO_SID;
+const TWILIO_TOKEN = config.twilio.TWILIO_TOKEN;
 
 //TWILIO INICIALIZA AL CLIENTE
 const twilioClient = twilio(TWILIO_SID,TWILIO_TOKEN);
 
 app.get('/sms', async(req, res) => {
-    const clientNumber = "+542235927124";
+    const CLIENT_NUMBER = config.twilio.CLIENT_NUMBER;
     const result = await twilioClient.messages.create({
         body: 'SMS de prueba',
         from: TWILIO_NUMBER,
-        to:clientNumber
+        to: CLIENT_NUMBER
     })
     res.send({status:"success",payload:result})
 })
