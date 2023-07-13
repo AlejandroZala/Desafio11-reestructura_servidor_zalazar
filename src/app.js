@@ -1,5 +1,6 @@
 import express from 'express';
 import nodemailer from 'nodemailer';
+import twilio from 'twilio';
 import config from './config/config.js';
 import session from 'express-session';
 import MongoStore from 'connect-mongo';
@@ -59,6 +60,24 @@ app.get('/mail',async (req, res) => {
                 cid:'logo'
             }
         ]
+    })
+    res.send({status:"success",payload:result})
+})
+
+//CONFIGURACIÓN MENSAJERÍA TWILIO
+const TWILIO_NUMBER= '+18145593595'
+const TWILIO_SID = 'AC9e13db7da5478040814b7b4a92c3c0d2';
+const TWILIO_TOKEN = '9784f6eba4a4d97779f75502c3e641d5';
+
+//TWILIO INICIALIZA AL CLIENTE
+const twilioClient = twilio(TWILIO_SID,TWILIO_TOKEN);
+
+app.get('/sms', async(req, res) => {
+    const clientNumber = "+542235927124";
+    const result = await twilioClient.messages.create({
+        body: 'SMS de prueba',
+        from: TWILIO_NUMBER,
+        to:clientNumber
     })
     res.send({status:"success",payload:result})
 })
