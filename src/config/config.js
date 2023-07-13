@@ -8,5 +8,9 @@ export default {
     },
     mongo:{
         URL: process.env.MONGO_URL || 'localhost:27017'
+    },
+    nodemailer:{
+        APP_PASSWORD: process.env.APP_PASSWORD,
+        APP_EMAIL: process.env.APP_EMAIL
     }
 }
